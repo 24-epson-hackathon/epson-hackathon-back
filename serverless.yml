@@ -1,0 +1,15 @@
+org: epson-hackathon
+app: epson-hackathon
+service: epson-hackathon
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  httpApi:
+    cors: true
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: '*'
